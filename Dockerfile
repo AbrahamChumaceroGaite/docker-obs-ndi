@@ -1,4 +1,4 @@
-FROM accetto/ubuntu-vnc-xfce-g3
+FROM accetto/debian-vnc-xfce-g3
 
 # for the VNC connection
 EXPOSE 5901  
@@ -26,8 +26,8 @@ RUN echo headless | sudo -S -k apt-get update \
 	&& echo headless | sudo -S -k apt-get update \
 	&& echo headless | sudo -S -k apt-get clean -y \
 # Copy various files to their respective places
-	&& echo headless | sudo -S -k wget -q -O /tmp/libndi4_4.5.1-1_amd64.deb https://github.com/Palakis/obs-ndi/releases/download/dummy-tag-4.10.0/libndi4_4.5.1-1_amd64.deb \
-	&& echo headless | sudo -S -k wget -q -O /tmp/obs-ndi-4.10.0-Ubuntu64.deb https://github.com/Palakis/obs-ndi/releases/download/dummy-tag-4.10.0/obs-ndi-4.10.0-Ubuntu64.deb \
+	&& echo headless | sudo -S -k wget -q -O /tmp/libndi5_5.5.3-1_amd64.deb https://github.com/obs-ndi/obs-ndi/releases/download/4.11.1/libndi5_5.5.3-1_amd64.deb \
+	&& echo headless | sudo -S -k wget -q -O /tmp/obs-ndi-4.11.1-linux-x86_64.deb https://github.com/obs-ndi/obs-ndi/releases/download/4.11.1/obs-ndi-4.11.1-linux-x86_64.deb \
 
 # Download and install the plugins for NDI
 	&& echo headless | sudo -S -k dpkg -i /tmp/*.deb \
