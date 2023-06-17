@@ -1,5 +1,5 @@
 FROM accetto/ubuntu-vnc-xfce-firefox-g3
-
+USER root
 # for the VNC connection
 EXPOSE 5901  
 # for the browser VNC client
