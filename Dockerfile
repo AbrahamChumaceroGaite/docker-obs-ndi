@@ -1,4 +1,4 @@
-FROM accetto/ubuntu-vnc-xfce-g3:20.04
+FROM accetto/ubuntu-vnc-xfce-firefox-g3
 
 # for the VNC connection
 EXPOSE 5901  
