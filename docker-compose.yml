@@ -12,4 +12,4 @@ services:
          - 6901:6901
          - 4455:4455
         volumes:
-         - /config
+    config:
