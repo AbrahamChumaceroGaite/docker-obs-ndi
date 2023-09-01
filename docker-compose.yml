@@ -1,13 +1,15 @@
-gptVNC:
-    image: accetto/ubuntu-vnc-xfce-chromium-g3
-    container_name: gptVNC
-    environment:
-     - VNC_PASSWD=headless
-     - NVIDIA_DRIVER_CAPABILITIES="compute,video,utility"
-    restart: always
-    ports:
-     - 5901:5901
-     - 6901:6901
-     - 4455:4455
-    volumes:
-     - /config
+version: "3"
+services:
+    gptVNC:
+        image: accetto/ubuntu-vnc-xfce-chromium-g3
+        container_name: gptVNC
+        environment:
+           VNC_PASSWD: "headless"
+           NVIDIA_DRIVER_CAPABILITIES: "compute,video,utility"
+        restart: always
+        ports:
+         - 5901:5901
+         - 6901:6901
+         - 4455:4455
+        volumes:
+         - /config
