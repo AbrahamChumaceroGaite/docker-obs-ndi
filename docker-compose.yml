@@ -9,7 +9,7 @@ services:
         restart: always
         ports:
          - 5901:5901
-         - 6901:6901
+         - 2901:6901
          - 4455:4455
         volumes:
             - config:/config
