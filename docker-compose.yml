@@ -8,9 +8,9 @@ services:
            NVIDIA_DRIVER_CAPABILITIES: "compute,video,utility"
         restart: always
         ports:
-         - 5901:5901
-         - 2901:6901
-         - 4455:4455
+         - 59201:5901
+         - 29301:6901
+         - 44355:4455
         volumes:
             - config:/config
 volumes:
